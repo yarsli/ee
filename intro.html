@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction to Quantum Mechanics</title>
+  <style>
+    body {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: Georgia, serif;
+      background: url('cosmic-bg.jpg') center/cover no-repeat;
+      color: #e0e0e0;
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    header {
+      background: rgba(0,0,0,0.6);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #ffdd57;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.15rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    section.content {
+      background: rgba(20,20,40,0.8);
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-left: 5px solid #ffdd57;
+    }
+    section.content h2 {
+      color: #ffd700;
+      margin-top: 1.5rem;
+    }
+    section.content p,
+    section.content dl {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    section.content dt {
+      font-weight: bold;
+      color: #fff;
+      margin-top: 1.2rem;
+    }
+    section.content dd {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    section.quiz {
+      text-align: center;
+      margin: 3rem 1rem;
+      background: rgba(40,20,60,0.9);
+      padding: 2rem;
+      border: 2px solid #ffdd57;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section.quiz h3 {
+      color: #ffdd57;
+    }
+    section.quiz button {
+      background: #222;
+      color: #ffdd57;
+      border: 1px solid #ffdd57;
+      padding: 0.8rem 1.2rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    section.quiz button:hover {
+      background: #ffdd57;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quantum Mechanics</h1>
+    <p>
+      Quantum mechanics is the study of the universe on its smallest scales, a realm where the rules of everyday life begin to dissolve...
+      Particles can act like waves, systems can exist in multiple states at once, and all this isn’t guesswork—it’s grounded in decades of confirmed experiments.
+    </p>
+  </header>
+
+  <section class="content">
+    <h2>Wavefunction & Hilbert Space</h2>
+    <p>
+      The wavefunction contains everything known about a quantum system. It doesn’t deliver a single answer, like “Where is the particle?” Instead, it describes every possible outcome—and the probabilities of each.
+      This lives within an abstract space called Hilbert space, a structure encompassing every possible state of a system.
+    </p>
+
+    <h2>Measurement & Collapse</h2>
+    <p>
+      When we measure a system, the wavefunction “collapses” to a single outcome. Before measurement, the system is in a superposition of possibilities. This isn’t just about limitations in perception—it’s how nature behaves.
+    </p>
+
+    <h2>Core Features</h2>
+    <dl>
+      <dt>Uncertainty Principle</dt>
+      <dd>Sets a limit on how accurately certain pairs of properties (like position and momentum) can be known simultaneously.</dd>
+      <dt>Entanglement</dt>
+      <dd>Creates lasting correlations between particles, no matter how far apart.</dd>
+      <dt>Technology Powered by Quantum</dt>
+      <dd>From transistors to quantum computers, quantum mechanics underlies countless technologies.</dd>
+    </dl>
+
+    <h2>Operators & Observables</h2>
+    <dl>
+      <dt>Operators</dt>
+      <dd>Tools that act on the wavefunction to reveal measurable properties—observables—like position, energy, and spin.</dd>
+      <dt>Eigenvalues & Eigenstates</dt>
+      <dd>An eigenstate remains unchanged by an operator, yet returns a multiplier (eigenvalue)—the definite measurement.</dd>
+      <dt>Commutators</dt>
+      <dd>Measure the degree to which two operators can be swapped without affecting the outcome. If they don't commute, simultaneous measurement is limited—this underlies the uncertainty principle.</dd>
+      <dt>Time Evolution</dt>
+      <dd>Governed by the Schrödinger equation, with the Hamiltonian guiding how wavefunctions evolve. Though the wavefunction evolves deterministically, measurements remain probabilistic.</dd>
+    </dl>
+  </section>
+
+  <section class="quiz">
+    <h3>Quick Quiz</h3>
+    <p>What does a wavefunction describe?</p>
+    <button onclick="alert('Yes! All possible states and probabilities.')">All possible states and probabilities</button>
+    <button onclick="alert('Not quite—that would be a single measurement result.')">A single definite outcome</button>
+  </section>
+</body>
+</html>
+
