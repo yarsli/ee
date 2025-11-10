@@ -2,139 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Introduction to Quantum Mechanics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love, Hama 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: Georgia, serif;
-      background: url('cosmic-bg.jpg') center/cover no-repeat;
-      color: #e0e0e0;
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(to bottom right, #ffd6e8, #ffe6e6);
+      color: #a83256;
+      text-align: center;
+      margin: 0;
       overflow-x: hidden;
-      animation: fadeIn 1s ease-out forwards;
-      opacity: 0;
+      scroll-behavior: smooth;
     }
-    @keyframes fadeIn { to { opacity: 1; } }
-    header {
-      background: rgba(0,0,0,0.6);
-      padding: 4rem 2rem;
-      text-align: center;
+
+    h1 {
+      font-size: 2.2em;
+      margin-top: 30px;
+      animation: float 3s ease-in-out infinite;
     }
-    header h1 {
-      font-size: 3rem;
-      color: #ffdd57;
-      letter-spacing: 2px;
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-    header p {
-      margin-top: 1rem;
-      font-size: 1.15rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+
+    .heart {
+      font-size: 2em;
+      color: #ff4d6d;
+      animation: heartbeat 1.5s infinite;
     }
-    section.content {
-      background: rgba(20,20,40,0.8);
-      padding: 2rem;
-      max-width: 900px;
-      margin: 2rem auto;
-      border-left: 5px solid #ffdd57;
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
     }
-    section.content h2 {
-      color: #ffd700;
-      margin-top: 1.5rem;
+
+    .letter {
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+      padding: 25px;
+      width: 85%;
+      margin: 30px auto;
+      line-height: 1.8;
+      transition: transform 0.3s;
     }
-    section.content p,
-    section.content dl {
-      line-height: 1.6;
-      margin-bottom: 1rem;
+
+    .letter:hover {
+      transform: scale(1.05);
     }
-    section.content dt {
-      font-weight: bold;
-      color: #fff;
-      margin-top: 1.2rem;
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 60px;
     }
-    section.content dd {
-      margin-left: 1.2rem;
-      margin-bottom: 1rem;
+
+    .event {
+      background: #fff0f5;
+      border: 2px solid #ffb6c1;
+      border-radius: 20px;
+      padding: 20px 30px;
+      width: 70%;
+      transition: all 0.3s;
+      font-size: 0.8em;
     }
-    section.quiz {
-      text-align: center;
-      margin: 3rem 1rem;
-      background: rgba(40,20,60,0.9);
-      padding: 2rem;
-      border: 2px solid #ffdd57;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+
+    .event:hover {
+      background: #ffe6ea;
+      transform: scale(1.05);
     }
-    section.quiz h3 {
-      color: #ffdd57;
-    }
-    section.quiz button {
-      background: #222;
-      color: #ffdd57;
-      border: 1px solid #ffdd57;
-      padding: 0.8rem 1.2rem;
-      margin: 0.5rem;
+
+    button {
+      background: #ff8fa3;
+      border: none;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 30px;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      transition: all 0.3s;
+      margin: 30px;
+      font-size: 0.8em;
     }
-    section.quiz button:hover {
-      background: #ffdd57;
-      color: #222;
+
+    button:hover {
+      background: #ff4d6d;
+      transform: scale(1.1);
+    }
+
+    .secret {
+      display: none;
+      margin: 20px auto;
+      background: #fff5f8;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 100, 150, 0.3);
+      width: 70%;
+      padding: 20px;
+      color: #a83256;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .footer {
+      margin: 60px 0;
+      font-size: 0.7em;
+      color: #a83256;
+    }
+
+    .floating-heart {
+      position: fixed;
+      font-size: 2em;
+      animation: floatUp 4s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Quantum Mechanics</h1>
+  <h1>For My Love, <span class="heart">❤</span> Hama <span class="heart">❤</span></h1>
+
+  <div class="letter">
+    <p>My dearest Hama,</p>
     <p>
-      Quantum mechanics is the study of the universe on its smallest scales, a realm where the rules of everyday life begin to dissolve...
-      Particles can act like waves, systems can exist in multiple states at once, and all this isn’t guesswork—it’s grounded in decades of confirmed experiments.
+      Two years of us — and somehow, every day still feels like a new melody. From the moment we met in 2022, my life gained this gentle, pixelated glow. By 2023, when our story truly began, you became my favorite level in this game called life. 🎮
     </p>
-  </header>
-
-  <section class="content">
-    <h2>Wavefunction & Hilbert Space</h2>
     <p>
-      The wavefunction contains everything known about a quantum system. It doesn’t deliver a single answer, like “Where is the particle?” Instead, it describes every possible outcome—and the probabilities of each.
-      This lives within an abstract space called Hilbert space, a structure encompassing every possible state of a system.
+      You make the world softer, funnier, and full of color. You’re my calm and my chaos — the sweetest paradox I never want to end. 💘
     </p>
-
-    <h2>Measurement & Collapse</h2>
     <p>
-      When we measure a system, the wavefunction “collapses” to a single outcome. Before measurement, the system is in a superposition of possibilities. This isn’t just about limitations in perception—it’s how nature behaves.
+      This page is for you, for every late-night call, every smile, every tiny pixel of our love story.
     </p>
+    <p>With love that only grows,<br>💞 Your forever player two</p>
+  </div>
 
-    <h2>Core Features</h2>
-    <dl>
-      <dt>Uncertainty Principle</dt>
-      <dd>Sets a limit on how accurately certain pairs of properties (like position and momentum) can be known simultaneously.</dd>
-      <dt>Entanglement</dt>
-      <dd>Creates lasting correlations between particles, no matter how far apart.</dd>
-      <dt>Technology Powered by Quantum</dt>
-      <dd>From transistors to quantum computers, quantum mechanics underlies countless technologies.</dd>
-    </dl>
+  <h2>💌 Our Love Timeline 💌</h2>
+  <div class="timeline">
+    <div class="event">🌸 2022 — The first spark: when we met, something felt cosmic.</div>
+    <div class="event">💞 2023 — You asked me out, and the universe finally aligned.</div>
+    <div class="event">🌹 2024 — Two years later, and I still find new reasons to fall for you every day.</div>
+    <div class="event">✨ Forever — Every heartbeat, every laugh, every moment — I choose you.</div>
+  </div>
 
-    <h2>Operators & Observables</h2>
-    <dl>
-      <dt>Operators</dt>
-      <dd>Tools that act on the wavefunction to reveal measurable properties—observables—like position, energy, and spin.</dd>
-      <dt>Eigenvalues & Eigenstates</dt>
-      <dd>An eigenstate remains unchanged by an operator, yet returns a multiplier (eigenvalue)—the definite measurement.</dd>
-      <dt>Commutators</dt>
-      <dd>Measure the degree to which two operators can be swapped without affecting the outcome. If they don't commute, simultaneous measurement is limited—this underlies the uncertainty principle.</dd>
-      <dt>Time Evolution</dt>
-      <dd>Governed by the Schrödinger equation, with the Hamiltonian guiding how wavefunctions evolve. Though the wavefunction evolves deterministically, measurements remain probabilistic.</dd>
-    </dl>
-  </section>
+  <button onclick="showLove()">Click Me for a Surprise 💕</button>
 
-  <section class="quiz">
-    <h3>Quick Quiz</h3>
-    <p>What does a wavefunction describe?</p>
-    <button onclick="alert('Yes! All possible states and probabilities.')">All possible states and probabilities</button>
-    <button onclick="alert('Not quite—that would be a single measurement result.')">A single definite outcome</button>
-  </section>
+  <button onclick="revealSecret()">Shake to Reveal 💫</button>
+
+  <div class="secret" id="secret">
+    <p>💖 Psst... Hama, you’re the glitch in my heart I never want to fix. 💖</p>
+  </div>
+
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3Lz1G8nRSE4YVYZkQ2vC6L?utm_source=generator" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <div class="footer">Made with endless love 💗 by your sweetheart</div>
+
+  <script>
+    function showLove() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '90vh';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }
+
+    function revealSecret() {
+      const secret = document.getElementById('secret');
+      secret.style.display = 'block';
+    }
+
+    // Shake detection
+    let lastX = 0, lastY = 0, lastZ = 0, shakeThreshold = 15;
+    if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', function(event) {
+        let x = event.accelerationIncludingGravity.x;
+        let y = event.accelerationIncludingGravity.y;
+        let z = event.accelerationIncludingGravity.z;
+        let speed = Math.abs(x + y + z - lastX - lastY - lastZ);
+        if (speed > shakeThreshold) {
+          revealSecret();
+        }
+        lastX = x; lastY = y; lastZ = z;
+      });
+    }
+  </script>
 </body>
 </html>
-
