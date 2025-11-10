@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love, Hama 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(to bottom right, #ffd6e8, #ffe6e6);
+      color: #a83256;
+      text-align: center;
+      margin: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-top: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .heart {
+      font-size: 2em;
+      color: #ff4d6d;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .letter {
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+      padding: 25px;
+      width: 85%;
+      margin: 30px auto;
+      line-height: 1.8;
+      transition: transform 0.3s;
+    }
+
+    .letter:hover {
+      transform: scale(1.05);
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 60px;
+    }
+
+    .event {
+      background: #fff0f5;
+      border: 2px solid #ffb6c1;
+      border-radius: 20px;
+      padding: 20px 30px;
+      width: 70%;
+      transition: all 0.3s;
+      font-size: 0.8em;
+    }
+
+    .event:hover {
+      background: #ffe6ea;
+      transform: scale(1.05);
+    }
+
+    button {
+      background: #ff8fa3;
+      border: none;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 30px;
+      font-size: 0.8em;
+    }
+
+    button:hover {
+      background: #ff4d6d;
+      transform: scale(1.1);
+    }
+
+    .secret {
+      display: none;
+      margin: 20px auto;
+      background: #fff5f8;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 100, 150, 0.3);
+      width: 70%;
+      padding: 20px;
+      color: #a83256;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .footer {
+      margin: 60px 0;
+      font-size: 0.7em;
+      color: #a83256;
+    }
+
+    .floating-heart {
+      position: fixed;
+      font-size: 2em;
+      animation: floatUp 4s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>For My Love, <span class="heart">❤</span> Hama <span class="heart">❤</span></h1>
+
+  <div class="letter">
+    <p>My dearest Hama,</p>
+    <p>
+      Two years of us — and somehow, every day still feels like a new melody. From the moment we met in 2022, my life gained this gentle, pixelated glow. By 2023, when our story truly began, you became my favorite level in this game called life. 🎮
+    </p>
+    <p>
+      You make the world softer, funnier, and full of color. You’re my calm and my chaos — the sweetest paradox I never want to end. 💘
+    </p>
+    <p>
+      This page is for you, for every late-night call, every smile, every tiny pixel of our love story.
+    </p>
+    <p>With love that only grows,<br>💞 Your forever player two</p>
+  </div>
+
+  <h2>💌 Our Love Timeline 💌</h2>
+  <div class="timeline">
+    <div class="event">🌸 2022 — The first spark: when we met, something felt cosmic.</div>
+    <div class="event">💞 2023 — You asked me out, and the universe finally aligned.</div>
+    <div class="event">🌹 2024 — Two years later, and I still find new reasons to fall for you every day.</div>
+    <div class="event">✨ Forever — Every heartbeat, every laugh, every moment — I choose you.</div>
+  </div>
+
+  <button onclick="showLove()">Click Me for a Surprise 💕</button>
+
+  <button onclick="revealSecret()">Shake to Reveal 💫</button>
+
+  <div class="secret" id="secret">
+    <p>💖 Psst... Hama, you’re the glitch in my heart I never want to fix. 💖</p>
+  </div>
+
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3Lz1G8nRSE4YVYZkQ2vC6L?utm_source=generator" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <div class="footer">Made with endless love 💗 by your sweetheart</div>
+
+  <script>
+    function showLove() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '90vh';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
+    }
+
+    function revealSecret() {
+      const secret = document.getElementById('secret');
+      secret.style.display = 'block';
+    }
+
+    // Shake detection
+    let lastX = 0, lastY = 0, lastZ = 0, shakeThreshold = 15;
+    if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', function(event) {
+        let x = event.accelerationIncludingGravity.x;
+        let y = event.accelerationIncludingGravity.y;
+        let z = event.accelerationIncludingGravity.z;
+        let speed = Math.abs(x + y + z - lastX - lastY - lastZ);
+        if (speed > shakeThreshold) {
+          revealSecret();
+        }
+        lastX = x; lastY = y; lastZ = z;
+      });
+    }
+  </script>
+</body>
+</html>
